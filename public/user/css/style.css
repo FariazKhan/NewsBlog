@@ -1,0 +1,582 @@
+/**
+    Daily News Bangla Theme stylesheet.
+    Author: fariazkhan19@gmail.com
+    Contact: fb.com/fariazkhan.1
+    **Copying/Duplicating any content from this document
+      without permission is strictly prohibited.**
+*/
+
+/* Miscellaneous CSS */
+@import url('https://fonts.maateen.me/mukti/font.css');
+
+.c-pointer {
+    cursor: pointer;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+body {
+    background: #f1f1f1 !important;
+}
+
+p,
+h3,
+h4,
+h5,
+span :lang(bn) {
+    font-family: 'Mukti',
+        Arial,
+        sans-serif !important;
+}
+
+/* Miscellaneous CSS Ends */
+
+/*Top nav*/
+.topbar {
+    width: 100%;
+    height: 35px;
+    background: rgb(29, 181, 255);
+    background: linear-gradient(90deg, rgba(29, 181, 255, 1) 0%, rgb(70, 149, 241) 55%);
+}
+
+/*Social Links*/
+.social-list {
+    list-style: none;
+    margin-top: -5px;
+    margin-bottom: auto;
+    margin-left: 0px;
+    padding: 0 !important;
+}
+
+.social-list li {
+    float: left;
+    margin-left: 10px;
+}
+
+.social-list li a {
+    font-size: 25px;
+    color: #25b5ff;
+    transition: 300ms;
+
+}
+
+.social-list li a:hover {
+    transition: 300ms;
+    color: #377aff;
+}
+
+/*Social Links Ends*/
+
+/*Timebar*/
+.time {
+    margin-right: 0px;
+    margin-bottom: auto;
+    color: #fff;
+    margin-top: 3px;
+    float: right;
+    font-family: quicksand;
+}
+
+/*Timebar Ends*/
+
+/*Main Nav*/
+.main-nav {
+    width: 100%;
+    height: 50px;
+    background: #fff;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #dddddd;
+    position: sticky;
+}
+
+.main-nav-ul {
+    list-style: none;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 0px;
+    padding: 0 !important;
+}
+
+.list-img {
+    list-style: none;
+}
+
+.list-img img {
+    max-height: 50px;
+    min-height: 50px;
+    max-width: 105px;
+    min-width: 105px;
+    margin-top: -10px;
+    margin-bottom: auto;
+    object-fit: contain;
+}
+
+.main-nav-ul li {
+    float: left;
+    margin-left: 15px;
+    text-transform: capitalize;
+    font-family: Play;
+}
+
+.main-nav-ul li:first-child {
+    margin-left: 0px;
+}
+
+.main-nav-ul li a {
+    color: #161a13;
+}
+
+.main-nav-ul li a:hover {
+    color: #ec421b;
+    text-decoration: none;
+    transition: 200ms;
+}
+
+/*Main Nav Ends*/
+
+/* Content area */
+.main-content {
+    width: 95% !important;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.top-news {
+    position: relative;
+}
+
+.top-news-info {
+    font-family: quicksand;
+    color: #fff;
+    display: block !important;
+    margin: 0;
+}
+
+.top-news-text>a {}
+
+.read-more-btn {
+    position: relative;
+    top: 0px;
+    width: 25%;
+    margin-top: 0px;
+    font-family: play;
+    transition: 300ms;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .read-more-btn {
+        width: 35%;
+    }
+}
+
+.read-more-btn:hover {
+    background: #80797900 !important;
+    transition: 300ms;
+}
+
+.top-news-text {
+    position: absolute;
+    top: 65%;
+    left: -55%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    background: rgba(102, 102, 102, 0) !important;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    z-index: 99;
+    display: block;
+}
+
+.top-news>img {
+    position: relative;
+    min-width: 100%;
+    max-width: 100%;
+    max-height: 400px;
+    border-radius: 10px;
+}
+
+.image-title {
+    font-family: shondip !important;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.top-news-text>h3 {
+    bottom: 100px;
+    left: 0px !important;
+    transform: translate(5%, 0%);
+    color: #dedddd;
+    font-family: ekushe !important;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.post-area {
+    display: flex;
+}
+
+.post-area>.row {
+    justify-content: center;
+}
+
+.post-card {
+    font-family: ekushelohit !important;
+    background: #ddd;
+    padding: 0 !important;
+    margin-left: 10px;
+    margin-bottom: 25px;
+    position: relative;
+    border-radius: 5px;
+}
+
+.post-card>img {
+    min-width: 100%;
+    max-width: 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.post-card>h3 {
+    text-align: center;
+    display: block;
+}
+
+.post-card>.card-link {
+    position: absolute;
+    top: 99.999%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100% !important;
+    margin: 0;
+    padding: 5px;
+    bottom: 0;
+    height: 35px;
+    text-align: center;
+    font-family: play;
+    color: #fff;
+    transition: 200ms;
+}
+
+.post-card>.card-link:hover {
+    transition: 200ms;
+    color: #15a2b7;
+    background: #fff !important;
+    border: 3px solid #15a2b7;
+}
+
+
+/* Content area ends */
+
+/* Sidebar CSS */
+.sidebar-card {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: 50% !important;
+}
+
+.sidebar-card:last-child {
+    border-bottom: 0px solid #ddd !important;
+}
+
+.sidebar-card>.row>img {
+    min-height: 70% !important;
+    max-height: 70% !important;
+    min-width: 40% !important;
+    max-width: 40% !important;
+}
+
+.thumbnail-text {
+    margin-left: 15px;
+    font-family: solaimanlipi;
+}
+
+/* Sidebar CSS Ends */
+
+/* Archive CSS Starts */
+.archives {
+    display: flex;
+    justify-content: center;
+}
+
+.archive {
+    border-radius: 5px;
+    margin-left: 2.555% !important;
+    padding: 0 !important;
+    width: 90% !important;
+    display: flex;
+    justify-content: center;
+}
+
+.archive>.col-md-3 {
+    background: #ececec;
+    padding: 0 !important;
+    margin: 5px;
+}
+
+.archive a {
+    color: #333 !important;
+    transition: 200ms;
+}
+
+.archive a:hover {
+    transition: 200ms;
+    text-decoration: none;
+    color: #14273a !important;
+}
+
+.text-area {
+    padding-right: 1px;
+    color: #333 !important;
+}
+
+
+.archive>.col-md-3>img {
+    min-width: 100%;
+    max-width: 100%;
+}
+
+.header {
+    color: #fff;
+    width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    margin-bottom: 15px !important;
+}
+
+.w-7 {
+    width: 7.77777% !important;
+}
+
+/* Archive CSS Ends */
+
+/* Post Page Css */
+
+.post-info-header {
+    margin: 0 !important;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.post-info-container {
+    text-align: center;
+}
+
+.post-text {
+    max-width: 100% !important;
+    min-width: 100% !important;
+    margin: 0px;
+    background: #000;
+}
+
+.post-images {
+    max-width: 100% !important;
+    height: auto !important;
+}
+
+/* Post Page Css Ends */
+
+
+/* Footer Css */
+
+.search-text {
+    margin-top: 50px;
+    background-color: #272d33;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.search-text .input-search {
+    height: 45px;
+    width: 40%;
+    padding-left: 20px;
+    color: #333;
+}
+
+.search-text .btn-search {
+    background: #da3e44;
+    border: none;
+    color: #FFF;
+    height: 45px;
+    width: 80px;
+}
+
+.search-text h4 {
+    color: #FFF;
+    font-weight: 700;
+}
+
+footer {
+    background-color: #33383c;
+    padding: 30px 0px;
+}
+
+.logo {
+    color: #FFF;
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.address span,
+.menu span {
+    color: #FFF;
+    font-weight: bold;
+    border-bottom: 1px solid #c7c7c7;
+    padding: 10px 0px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 3px;
+}
+
+.address li a,
+.menu li a {
+    color: #FFF;
+    letter-spacing: 3px;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.address li,
+.menu li {
+    margin: 20px 0px;
+    list-style: none;
+}
+
+.address li a:hover,
+.menu li a:hover {
+    color: #da3e44;
+    -webkit-transition: all 1s ease-in-out;
+    -moz-transition: all 1s ease-in-out;
+    -o-transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
+}
+
+.address .fa {
+    color: #da3e44;
+    margin-right: 10px;
+    font-size: 18px;
+}
+
+/* Footer Css Ends */
+
+
+
+/*Fonts*/
+
+
+@font-face {
+    font-family: anton;
+    src: url('fonts/Anton-Regular.tff');
+}
+
+@font-face {
+    font-family: roboto;
+    src: url('fonts/Roboto-Light.ttf');
+}
+
+@font-face {
+    font-family: muktalight;
+    src: url('fonts/MuktaMalar-Light.tff');
+}
+
+@font-face {
+    font-family: muktaregular;
+    src: url('fonts/MuktaMalar-Regular.tff');
+}
+
+@font-face {
+    font-family: muli;
+    src: url('fonts/Muli-Light.tff');
+}
+
+@font-face {
+    font-family: play;
+    src: url('fonts/Play-Regular.tff');
+}
+
+@font-face {
+    font-family: quicksand;
+    src: url('fonts/Quicksand-Light.tff');
+}
+
+@font-face {
+    font-family: solaimanlipi;
+    src: url('fonts/SolaimanLipi.ttf');
+}
+
+@font-face {
+    font-family: ekushelohit;
+    src: url('fonts/Ekushey_Lohit-Normal.ttf');
+}
+
+@font-face {
+    font-family: mukti-regular;
+    src: url('fonts/muktiregular.ttf');
+}
+
+@font-face {
+    font-family: ekushe;
+    src: url('fonts/Ekushey_Lohit-Normal.ttf');
+}
+
+@font-face {
+    font-family: teesta;
+    src: url('fonts/ShorifTeesta.ttf');
+}
+
+@font-face {
+    font-family: shondip;
+    src: url('fonts/ShorifSandwip.ttf');
+}
+
+.font-roboto {
+    font-family: roboto !important;
+}
+
+.font-play {
+    font-family: play !important;
+}
+
+.font-quicksand {
+    font-family: quicksand !important;
+}
+
+.font-anton {
+    font-family: anton !important;
+}
+
+.font-muktalight {
+    font-family: muktalight !important;
+}
+
+.font-muktiregular {
+    font-family: mukti-regular !important;
+}
+
+.font-muli {
+    font-family: muli !important;
+}
+
+.font-slipi {
+    font-family: solaimanlipi !important;
+}
+
+.font-ekushe {
+    font-family: ekushe !important;
+}
+
+.font-teesta {
+    font-family: teesta !important;
+}
+
+.font-shondip {
+    font-family: shondip !important;
+}

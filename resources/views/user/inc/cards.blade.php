@@ -3,8 +3,8 @@
         <img src="{{asset('user/images/uploads/post/' . $p->image)}}" class="img" alt="Failed to load image"> 
         <br>
         <br>
-        <p class="text-center">In {{ $p->category['name'] }} archive</p>
-        <h3 class="font-slipi">{{ $p->title }}</h3>
+        <p class="text-center font-ekushe">In {{ $p->category['name'] }} archive</p>
+        <h3 class="font-teesta">{{ $p->title }}</h3>
         <a class="card-link m-0 bg-info" href="{{ route('showPost', $p->title) }}">Read More &rarr;</a>
         <br>
     </div>

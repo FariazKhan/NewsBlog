@@ -44,9 +44,17 @@ class HomeController extends Controller
         return view('user.pages.archive')->with(compact('dat', 'archive'));
     }
 
+    public function showAllArchive()
+    {
+        $archive = Categories::all();
+        return view('user.pages.archive-all');
+    }
+
     public function showPost($title)
     {
         $dat = Post::where('title', '=', $title)->get()->first();
-        return view('user.pages.post')->with(compact('dat'));
+        $previous = Post::where('id', '<', $dat->id)->get()->last();
+        $next = Post::where('id', '>', $dat->id)->get()->first();
+        return view('user.pages.post')->with(compact('dat', 'previous', 'next'));
     }
 }

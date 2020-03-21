@@ -8,6 +8,7 @@
 
 /* Miscellaneous CSS */
 @import url('https://fonts.maateen.me/mukti/font.css');
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300&display=swap');
 
 .c-pointer {
     cursor: pointer;
@@ -20,16 +21,6 @@
 
 body {
     background: #f1f1f1 !important;
-}
-
-p,
-h3,
-h4,
-h5,
-span :lang(bn) {
-    font-family: 'Mukti',
-        Arial,
-        sans-serif !important;
 }
 
 /* Miscellaneous CSS Ends */
@@ -297,6 +288,13 @@ span :lang(bn) {
     font-family: solaimanlipi;
 }
 
+.sidebar-item {
+    border-top: 1px solid #ddd !important;
+    border-bottom: 1px solid #ddd !important;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
 /* Sidebar CSS Ends */
 
 /* Archive CSS Starts */
@@ -367,18 +365,51 @@ span :lang(bn) {
 
 .post-info-container {
     text-align: center;
+    padding: 5px 5px 5px 5px;
 }
 
 .post-text {
     max-width: 100% !important;
     min-width: 100% !important;
     margin: 0px;
-    background: #000;
+}
+
+@media only screen and (max-width: 600px) {
+    .post-text {
+        max-width: 100% !important;
+        min-width: 100% !important;
+        margin: 0px !important;
+    }
 }
 
 .post-images {
     max-width: 100% !important;
     height: auto !important;
+}
+
+.bottom-navigation {
+    background: #ddd;
+    min-height: 35px !important;
+}
+
+.bottom-navigation>a {
+    min-height: 77px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottom-navigation>.col-md-6:last-child {
+    border-left: 1px solid #fff;
+}
+
+@media only screen and (max-width: 600px) {
+
+    .bottom-navigation>.col-md-6:last-child {
+        border-top: 1px solid #fff;
+        border-left: 0px;
+    }
+
 }
 
 /* Post Page Css Ends */
@@ -510,31 +541,43 @@ footer {
 @font-face {
     font-family: solaimanlipi;
     src: url('fonts/SolaimanLipi.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: ekushelohit;
     src: url('fonts/Ekushey_Lohit-Normal.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: mukti-regular;
     src: url('fonts/muktiregular.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: ekushe;
     src: url('fonts/Ekushey_Lohit-Normal.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: teesta;
     src: url('fonts/ShorifTeesta.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
     font-family: shondip;
     src: url('fonts/ShorifSandwip.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
 
 .font-roboto {
@@ -566,7 +609,7 @@ footer {
 }
 
 .font-slipi {
-    font-family: solaimanlipi !important;
+    font-family: solaimanlipi, Helvetica !important;
 }
 
 .font-ekushe {

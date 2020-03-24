@@ -7,7 +7,9 @@
     <hr>
     <br>
     <br>
-
+    @if (count($dat) == 0)
+        <p class="font-quicksand">There are currently no posts under this archive...</p>
+    @endif
     @foreach ($dat as $data)
         <div class="card col-md-5 offset-md-1 mb-5">
             <img class="rounded" src="{{ asset('user/images/uploads/post/' . $data->image) }}" alt="Failed to load image!" style="max-height: 100px; flex: 0% ">

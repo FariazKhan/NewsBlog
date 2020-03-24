@@ -26,9 +26,10 @@
                 <ul class="menu">
                     <span class="font-ekushe"> মেন্যু </span>
                     <li><a href="#">হোম</a></li>
-                    <li><a href="#">আর্কাইভ</a></li>
-                    <li><a href="#"> অনুদান </a></li>
-                    <li><a href="#"> যোগাযোগ </a></li>
+                    <li><a href="{{ route('showAllArchive') }}">আর্কাইভ</a></li>
+                    @foreach ($pages as $page)
+                        <li><a href="{{ url('archives/' . $page->slug) }}"> {{ $page->title }} </a></li>                
+                    @endforeach
                 </ul>
             </div>
             

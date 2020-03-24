@@ -51,4 +51,3 @@
         $('.post-info-container').find('p').addClass('post-text');
     </script>
 @endsection
-    

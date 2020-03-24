@@ -44,7 +44,7 @@
                 @if ($role_id == 1 || $role_id == 2)                    
                 <li class="@yield('widgets')">
                     <a class="menu-toggle waves-effect waves-block">
-                        <i class="material-icons">local_post_office</i>
+                        <i class="material-icons">widgets</i>
                         <span>Widgets</span>
                     </a>
                     <ul class="ml-menu" style="display: none;">
@@ -87,6 +87,15 @@
                             </li>
                         </a>   
                     </ul>
+                </li>
+                @endif
+
+                @if ($role_id == 1 || $role_id == 2)                    
+                <li class="@yield('active_page')">
+                    <a href="{{ route('pages.index') }}" class="waves-effect waves-block">
+                        <i class="material-icons">web</i>
+                        <span>Pages</span>
+                    </a>
                 </li>
                 @endif
 

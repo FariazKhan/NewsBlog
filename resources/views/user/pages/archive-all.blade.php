@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="col-md-7">
+<div class="col-md-6">
     <h3 class="font-quicksand">All Archives:</h3>
     <hr>
     <div class="row">
@@ -13,6 +13,9 @@
                 {{ $a->name }}
             </div>
             <?php $posts = $a->posts ?>
+            @if (count($posts) == 0)
+                There are no posts in this archive currently...
+            @endif
             @foreach ($posts as $post)
             <div class="col-md-12 mb-3" style="border: 1px solid #ddd; border-radius: 5px;">
                 <div class="row">
@@ -33,16 +36,21 @@
     
 </div>
 
-<div class="col-md-3">
+<div class="col-md-3 container pl-5">
     <div class="row">
         @foreach($sidebar as $p)
-        <div class="col-md-12 clearfix d-flex flex-row mb-3">
-            <div class="thumbnail-text float-left col-md-6 d-inline text-truncate">
-                <p class="font-slipi d-inline">{{ $p->title }}</p>
+        <div class="col-md-12 sidebar-card">
+            <div class="row">
+                <div class="img-container bg-dark col-md-5 col-sm-6 col-6 float-left" style="width: 50%;">
+                    <img src="{{asset('user/images/uploads/post/' . $p->image)}}" class="img rounded" alt="">
+                </div>
+                <div class="thumbnail-text col-md-6 col-sm-6 col-5">
+                    <p class="column-no-left-padding font-muktiregular">{{ $p->title }}</p>
+                </div>
             </div>
-            <img src="{{asset('user/images/uploads/post/' . $p->image)}}" class="d-inline float-right col-md-6" alt="Failed to load image" style="max-width: 50%;">
         </div>
         @endforeach
+        
     </div>
 </div>
 

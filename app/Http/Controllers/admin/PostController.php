@@ -6,8 +6,10 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\admin\Post;
 use App\admin\Categories;
+use App\Mail\SubscriptionMails;
 use Illuminate\Support\Facades\Auth;
 use App\User;
+use Illuminate\Support\Facades\Mail;
 
 class PostController extends Controller
 {
@@ -54,15 +56,12 @@ class PostController extends Controller
             'body.required' => 'The body is required',
             'status.required' => 'The post status is required',
             'categories.required' => 'The post category is required',
-        ]);
-
+            ]);
+        
         $inject = new Post;
         $inject->title = $request->title;
         $inject->subtitle = $request->subtitle;
-        // $inject->slug = str_slug($request->title);
-        // $inject->type = $request->type;
         $inject->status = $request->status;
-        // $inject->size = $request->size;
         $inject->posted_by = Auth::user()->name;
         $inject->categories_id = $request->categories;
         $inject->body = $request->body;
@@ -89,7 +88,7 @@ class PostController extends Controller
         $user = User::find(Auth::user()->id);
         $user->num_of_posts = $user->num_of_posts + 1;
         $user->save();
-        // $inject->tags()->sync($request->tags);
+        Mail::to('fariazkhan19@email.com')->send(new SubscriptionMails());
         return redirect(route('post.index'))->with('insertion', 'success');
     }
 

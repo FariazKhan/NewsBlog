@@ -7,10 +7,15 @@
 * ---------------------------
 */
 
+use App\Mail\SubscriptionMails;
+
 // Admin Home route
 Route::get('administrator', function(){
     return view('admin.home');
 })->name('home')->middleware('auth', 'check_admin_role');
+
+// Pages routes
+Route::resource('admin/pages', 'admin\PagesController');
 
 Route::group(['namespace' => 'admin', 'middleware' => 'check_admin_role'], function()
 {
@@ -59,6 +64,9 @@ Auth::routes();
  */
 
  Route::get('/', 'HomeController@index')->name('homepage');
+//  Route::get('/', function(){
+//      return new SubscriptionMails();
+//  })->name('homepage');
  Route::get('archives', 'HomeController@showAllArchive')->name('showAllArchive');
  Route::get('archives/{slug}', 'HomeController@showArchive')->name('showArchive');
  Route::get('posts/{title}', 'HomeController@showPost')->name('showPost');

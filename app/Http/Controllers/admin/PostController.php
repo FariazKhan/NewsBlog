@@ -88,7 +88,7 @@ class PostController extends Controller
         $user = User::find(Auth::user()->id);
         $user->num_of_posts = $user->num_of_posts + 1;
         $user->save();
-        Mail::to('fariazkhan19@email.com')->send(new SubscriptionMails());
+        // Mail::to('fariazkhan19@email.com')->send(new SubscriptionMails());
         return redirect(route('post.index'))->with('insertion', 'success');
     }
 
@@ -126,6 +126,7 @@ class PostController extends Controller
         $inject = Post::find($id);
         $inject->title = $request->title;
         $inject->subtitle = $request->subtitle;
+        $inject->status = $request->status;
         $inject->posted_by = Auth::user()->name;
         $inject->body = $request->body;
         if(!$request->hasFile('image'))
@@ -141,8 +142,7 @@ class PostController extends Controller
             $permitted =  array('jpg', 'png', 'bmp', 'gif', 'jpeg');
             if (!in_array($extension, $permitted))
             {
-                // return back()->with('img_not_supp');
-                return 5;
+                return back()->with('img_not_supp');
             }
             else
             {

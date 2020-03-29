@@ -65,8 +65,7 @@ active
                                 <th>Posted By</th>
                                 <th>Posted On</th>
                                 <th>Archive</th>
-                                <th>Likes</th>
-                                <th>Dislikes</th>
+                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                         </thead>
@@ -77,7 +76,7 @@ active
                                 <th>Posted By</th>
                                 <th>Posted On</th>
                                 <th>Archiven</th>
-                                <th>Likes</th>
+                                <th>Status</th>
                                 <th>Actions</th>
                             </tr>
                         </tfoot>
@@ -89,10 +88,9 @@ active
                                     <td>{{ $val->posted_by }}</td>
                                     <td>{{ $val->created_at }}</td>
                                     <td>{{ App\admin\Categories::where('id', '=', $val->categories_id)->get()->first()['name'] }}</td>
-                                    <td>{{ $val->likes }}</td>
-                                    <td>{{ $val->dislikes }}</td>
+                                    <td>@if( $val->status  == 1) <span class="badge bg-green">Published </span> @else <span class="badge bg-pink">Drafted </span> @endif</td>
                                     <td>
-                                        <a href="{{route('post.show', $val->id)}}">
+                                        <a href="{{route('showPost', $val->title)}}">
                                         <button class="btn btn-info waves-effect"><i class="material-icons">remove_red_eye</i></button>
                                         </a>
                                         <a href="{{route('post.edit', $val->id)}}">

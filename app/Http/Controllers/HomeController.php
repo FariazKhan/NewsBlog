@@ -28,7 +28,6 @@ class HomeController extends Controller
 
     public function index()
     {
-        
         return view('user.pages.home');
     }
 
@@ -48,6 +47,11 @@ class HomeController extends Controller
     {
         $archive = Categories::all();
         return view('user.pages.archive-all');
+    }
+
+    public function showAllPosts()
+    {
+        return view('user.pages.all-post');
     }
 
     public function showPost($title)

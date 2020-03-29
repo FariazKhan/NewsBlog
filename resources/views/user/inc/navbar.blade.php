@@ -22,6 +22,13 @@
                 <li class="social-list-item"><a href="#"><i class="fab fa-blogger"></i></a></li>
             </ul>
         </div>
+        @if (Auth::check())
+            <div class="ml-5">
+                <a href="{{ route('home') }}">
+                    <button class="btn btn-success btn-sm"><i class="fas fa-user-shield"></i> Go To Admin Panel</button>
+                </a>
+            </div>
+        @endif
     </div>
 </div>
 <br>
@@ -32,13 +39,13 @@
     <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="navbar-toggler-icon"></span>
     </button>
-    
+    @if (Auth::check())
+        <a href="{{ route('home') }}" class="col-md-12 w-100">
+            <button class="btn btn-success d-inline"><i class="fas fa-user-shield"></i> Go To Admin Panel</button>
+        </a>
+    @endif    
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav">
-            {{-- <a href="#" class="nav-item nav-link active">Home</a>
-            <a href="#" class="nav-item nav-link">About</a>
-            <a href="#" class="nav-item nav-link">Products</a> --}}
-
             <li class="nav-item nav-link"><a href="{{ route('homepage') }}">হোম</a></li>
             <li class="dropdown c-pointer nav-item nav-link" aria-haspopup="true" aria-expanded="false"><a>আর্কাইভসমূহ</a>
                 <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">

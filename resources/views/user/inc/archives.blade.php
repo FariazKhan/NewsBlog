@@ -3,7 +3,7 @@
         <div class="header bg-info text-center font-play" style="max-height: 20px;">
             {{ $a->name }}
         </div>
-        <?php $posts=$a->posts ?>
+        <?php $posts = $a->posts->take(5) ?>
         @foreach ($posts as $post)
             <div class="col-md-4 mb-3 mr-1" style="border: 1px solid #ddd; border-radius: 5px;">
                 <div class="row">
@@ -16,7 +16,13 @@
                 </div>    
             </div>
         @endforeach
-        
+        <div class="col-md-8">
+            <a class="d-block" href="{{ route('showArchive', $a->slug) }}">
+                <button class="btn btn-block btn-info all-post-btn"><i class="far fa-eye"></i>
+                    <span>View All</span>
+                </button>
+            </a>
+        </div>
     </div>
 
 @endforeach

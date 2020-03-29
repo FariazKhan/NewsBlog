@@ -69,4 +69,5 @@ Auth::routes();
 //  })->name('homepage');
  Route::get('archives', 'HomeController@showAllArchive')->name('showAllArchive');
  Route::get('archives/{slug}', 'HomeController@showArchive')->name('showArchive');
+ Route::get('posts/all/', 'HomeController@showAllPosts')->name('showAllPosts');
  Route::get('posts/{title}', 'HomeController@showPost')->name('showPost');

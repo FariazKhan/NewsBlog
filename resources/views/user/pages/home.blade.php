@@ -28,6 +28,18 @@
 @section('content')
     <!-- Main Card-Like posts -->
     @include('user.inc.cards')
+    
+    <div class="col-md-12">
+        <div class="col-md-4 mx-auto">
+            <a href="{{ route('showAllPosts') }}">
+            <button class="btn btn-block btn-info all-post-btn"><i class="far fa-eye"></i>
+                <span>View All Posts</span>
+            </button>
+            </a>
+        </div>
+        <br>
+        <br>
+    </div>
     <!-- Main Card-Like posts Ends-->
                             
     <div class="archives row">

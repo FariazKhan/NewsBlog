@@ -56,6 +56,7 @@ active
                             </div>
                             <div class="col-sm-6">
                                 <div class="form-group">
+                                    <input type="hidden" value="0" name="status">
                                     <input type="checkbox" id="published" value="1" name="status">
                                     <label for="published">Published</label>
                                     <p class="text-danger">{{$errors->first('status')}}</p>

@@ -7,7 +7,9 @@
                     <img src="{{asset('user/images/uploads/post/' . $p->image)}}" class="img rounded" alt="">
                 </div>
                 <div class="thumbnail-text col-md-6 col-sm-6 col-5">
-                    <p class="column-no-left-padding font-muktiregular">{{ $p->title }}</p>
+                    <a href="{{ route('showPost', $p->title) }}">
+                        <p class="t-d-none column-no-left-padding font-ekushe">{{ $p->title }}</p>
+                    </a>
                 </div>
             </div>
         </div>
